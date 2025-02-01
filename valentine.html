@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; margin: 50px; background-color: #ffe6e6; }
+        h1 { color: #ff4d4d; }
+        .buttons { margin-top: 20px; }
+        .buttons {position: relative; left: -46px; }
+        .btn { font-size: 20px; padding: 10px 20px; margin: 10px; cursor: pointer; border-radius: 10px; }
+        .yes { background-color: #ff4d4d; color: white; }
+        .no { background-color: #999; color: white; position: absolute; }
+        .quiz { display: none; margin-top: 20px; }
+        .final-message { display: none; font-size: 24px; color: #ff4d4d; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Will You Be My Valentine? 💖</h1>
+    <div class="buttons">
+        <button class="btn yes" onclick="startQuiz()">Yes</button>
+        <button class="btn no" onmouseover="moveButton(this)" onclick="moveButton(this)">No</button>
+    </div>
+    
+    <div class="quiz" id="quiz">
+        <h2>Great! But first, answer these questions! 😊</h2>
+        <p>1. How much do you love me?</p>
+        <button class="btn" onclick="nextQuestion(1)">More than anything! 💕</button>
+        <button class="btn" onclick="nextQuestion(1)">Beyond words! 😍</button>
+        <button class="btn" onclick="nextQuestion(1)">With all my heart! ❤️</button>
+        
+        <div id="q2" style="display:none;">
+            <p>2. What's your answer to being my Valentine?</p>
+            <button class="btn" onclick="nextQuestion(2)">Yes! Of course! 💖</button>
+            <button class="btn" onclick="nextQuestion(2)">Absolutely! 💘</button>
+            <button class="btn" onclick="nextQuestion(2)">100% YES! 💝</button>
+        </div>
+
+        <div id="q3" style="display:none;">
+            <p>3. How excited are you for our Valentine's date?</p>
+            <button class="btn" onclick="showFinalMessage()">Super excited! 🥰</button>
+            <button class="btn" onclick="showFinalMessage()">Can't wait! 💞</button>
+            <button class="btn" onclick="showFinalMessage()">Beyond thrilled! 🎉</button>
+        </div>
+    </div>
+    
+    <div class="final-message" id="final-message">
+        Yay! I knew it! I Love you! ❤️🥰
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
